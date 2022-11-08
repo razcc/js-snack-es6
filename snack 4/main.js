@@ -22,3 +22,8 @@ calcio.forEach((element) => {
 })
 
 console.log(calcio)
+
+const newArray = calcio.map (({nome, falliSubiti}) => {
+    return {nome, falliSubiti}
+})
+console.log (newArray)
