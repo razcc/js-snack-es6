@@ -13,16 +13,23 @@ const arrayBici = [
     }
 ];
 
+
 // console.log(arrayBici);
 
 
-let variabileConfronto = 10;
-console.log(variabileConfronto)
-let newArray = [];
-
-arrayBici.forEach ((element) => {
-    newArray.push(element)
-})
+let biciLeggera = arrayBici[0];
 
 
-// !NON VIENE
+// let {nome, peso} = biciLeggera;                     
+
+for(let i = 0; i < arrayBici.length; i++){
+
+    let elementoCorrente = arrayBici[i];
+    let {peso} = elementoCorrente; 
+
+    if(peso < biciLeggera.peso){
+        biciLeggera = elementoCorrente;
+    }
+}
+console.log(biciLeggera)
+
