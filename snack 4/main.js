@@ -16,9 +16,13 @@ const calcio = [
     }
 ];
 
+function getRandomInt (min, max){
+    return  Math.floor(Math.random() * max) + min;
+}
+
 calcio.forEach((element) => {
-    element.puntiFatti = Math.floor(Math.random() * 10) + 1;
-    element.falliSubiti = Math.floor(Math.random() * 10) + 1;
+    element.puntiFatti = getRandomInt (1, 100);
+    element.falliSubiti = getRandomInt (1, 100);
 })
 
 console.log(calcio)
